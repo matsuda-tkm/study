@@ -21,3 +21,9 @@ def chi2_test(table):
     chi_square = np.sum((table-H0)**2 / H0)
     p_value = 1 - chi2.cdf(x=chi_square, df=1)
     return p_value
+
+# 実際に使う
+t = np.array([[4,6],
+              [8,30]])
+# P値
+print(chi2_test(t))
